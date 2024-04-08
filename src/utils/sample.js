@@ -5,7 +5,7 @@ const sample ={
             "user": "6609d8e767c1d1dee684f0ac",
             "title": "First note of Anshu",
             "description": "This is really the first note of Anshu",
-            "tag": "special",
+            "tag": "Special",
             "date": "2024-04-01T20:49:36.314Z",
             "__v": 0
         },
@@ -32,7 +32,7 @@ const sample ={
             "user": "6609d8e767c1d1dee684f0ac",
             "title": "Second note of Anshu",
             "description": "This is really the second note of Anshu",
-            "tag": "General",
+            "tag": "Purple",
             "date": "2024-04-01T20:57:03.901Z",
             "__v": 0
         },
