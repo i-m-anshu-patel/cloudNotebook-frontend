@@ -1,15 +1,16 @@
 import React from 'react'
 
-const NoteCard = () => {
+const NoteCard = ({note}) => {
   return (
-    <div class="max-w-sm mx-auto">
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <img class="w-full h-32 object-cover" src="https://via.placeholder.com/600x200" alt="Card"/>
-            <div class="p-4">
-                <h2 class="font-bold text-xl mb-2 text-black">Card Title</h2>
-                <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.</p>
-                <div class="mt-4">
-                   
+    <div className="max-w-md mx-auto">
+        <div className="bg-white shadow-md rounded-lg overflow-hidden">
+            <div className="p-4">
+                <h2 className="font-bold text-xl mb-2 text-black">{note.title}</h2>
+                <p className="text-gray-700">{note.description}</p>
+                <button type='button'className='mt-3 mx-1  text-gray-700 rounded-xl px-2 py-1 border border-gray-500'>{note.tag}</button>
+                <div className="mt-4">
+                   <button type='button' className='bg-yellow-500 rounded-md px-2 py-1 mx-1'>Edit</button>
+                   <button type='button' className='bg-red-500 rounded-md px-2 py-1 mx-1'>Delete</button>
                 </div>
             </div>
         </div>
