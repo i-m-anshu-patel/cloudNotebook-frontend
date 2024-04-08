@@ -7,7 +7,7 @@ const NoteCard = ({note}) => {
             <div className="p-4">
                 <h2 className="font-bold text-xl mb-2 text-black">{note.title}</h2>
                 <p className="text-gray-700">{note.description}</p>
-                <button type='button'className='mt-3 mx-1  text-gray-700'>{note.tag}</button>
+                <button type='button'className='mt-3 mx-1 px-1 py-1 rounded-xl text-gray-700 border border-gray-500'>#{note.tag}</button>
                 <div className="mt-4">
                    <button type='button' className='bg-yellow-500 rounded-md px-2 py-1 mx-1'>Edit</button>
                    <button type='button' className='bg-red-500 rounded-md px-2 py-1 mx-1'>Delete</button>
