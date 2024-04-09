@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import NoteCard from './NoteCard'
 import sample from '../utils/sample'
+import NoteForm from './NoteForm';
 
 const Home = () => {
   const records = sample.notes;
@@ -35,6 +36,7 @@ const Home = () => {
           <input type='text' className='rounded py-1 px-1' placeholder='Search' />
         </div>
       </div>
+      <NoteForm />
       <div className='grid grid-cols-4 gap-4'>
         {notes && notes.map((record) =>
           (<NoteCard key={record._id} note={record} />)
