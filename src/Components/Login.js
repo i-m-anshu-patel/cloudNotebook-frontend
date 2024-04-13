@@ -1,7 +1,8 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { signIn } from '../utils/redux/userSlice';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux'
 
 const Login = () => {
   const [signInMode, setSignInMode] = useState(true);
@@ -10,7 +11,7 @@ const Login = () => {
   const username = useRef(null);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  const authToken = useSelector((store) => store.user.user);
   const handleSubmit = (event) => {
     event.preventDefault();
     const myHeaders = new Headers();
@@ -84,9 +85,13 @@ const Login = () => {
           navigate('/');
         });
     }
-
-
   }
+
+  useEffect(() => {
+    if(authToken){
+      return navigate('/home');
+    }
+  })
   return (
     <div className='bg-gradient-to-r from-indigo-500  to-pink-500 w-1/3 ms-auto me-auto py-5 ps-4 pe-4 mt-24 shadow-inner'>
       <p className='text-center font-bold text-xl mb-2'>{signInMode ? "Login" : "SignUp"}</p>

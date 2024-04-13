@@ -9,7 +9,7 @@ const userSlice = createSlice({
         signIn: (state, action) => {
             return { user : action.payload }
         },
-        signOut: (state, action) => {
+        signOut: (state) => {
             return { user : null }
         }
     }

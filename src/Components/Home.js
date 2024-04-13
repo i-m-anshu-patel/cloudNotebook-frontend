@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
-import NoteCard from './NoteCard'
-import sample from '../utils/sample'
+import React, { useEffect, useState } from 'react';
+import NoteCard from './NoteCard';
 import NoteForm from './NoteForm';
 import { useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
