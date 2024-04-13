@@ -2,9 +2,9 @@ import React from 'react'
 
 const NoteCard = ({note}) => {
   return (
-    <div className="max-w-md mx-auto">
-        <div className="bg-white shadow-md rounded-lg overflow-hidden">
-            <div className="p-4">
+    <div>
+        <div className="bg-white shadow-md rounded-lg overflow-hidden  h-full">
+            <div className="p-4 h-full">
                 <h2 className="font-bold text-xl mb-2 text-black">{note.title}</h2>
                 <p className="text-gray-700">{note.description}</p>
                 <button type='button'className='mt-3 mx-1 px-1 py-1 rounded-xl text-gray-700 border border-gray-500'>#{note.tag}</button>
