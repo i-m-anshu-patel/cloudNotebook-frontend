@@ -11,7 +11,7 @@ const Home = () => {
   const [notes, setNotes] = useState(null);
   const [tagFilter, setTagFilter] = useState(null);
   const [notesModal, setNotesModal] = useState(false);
-  const [notesUpdated, setNotesUpdated] = useState(false);
+  const [notesUpdated, setNotesUpdated] = useState("");
   const authToken = useSelector((store) => store.user.user);
   const tagNames = previousNotes ? [...new Set(previousNotes.map(notes => notes.tag))] : [];
   const navigate = useNavigate();
@@ -70,10 +70,10 @@ const Home = () => {
           <input type='text' className='rounded py-1 px-1' placeholder='Search' />
         </div>
       </div>
-      {notesModal && (<NoteForm setNotesModal={setNotesModal} setNotesUpdated={setNotesUpdated} />)}
+      {notesModal && (<NoteForm setNotesModal={setNotesModal} setNotesUpdated={setNotesUpdated}  />)}
       <div className='grid grid-cols-4 gap-4'>
         {notes && notes.map((record) =>
-          (<NoteCard key={record._id} note={record} />)
+          (<NoteCard key={record._id} note={record} setNotesUpdated={setNotesUpdated} setNotesModal={setNotesModal} />)
         )}
       </div>
     </div>

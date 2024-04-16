@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { useSelector } from "react-redux"
 
 const NoteForm = ({ setNotesModal, setNotesUpdated }) => {
@@ -31,7 +31,7 @@ const NoteForm = ({ setNotesModal, setNotesUpdated }) => {
       .then((response) => response.json())
       .then((result) => {
         alert(result.message);
-        setNotesUpdated(true);
+        setNotesUpdated("create-edit"+Math.random() * 100);
         setNotesModal(false);
       })
       .catch((error) => console.error(error));
